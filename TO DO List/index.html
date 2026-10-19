@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+        <header>
+            <h1>My Tasks <span>✓</span></h1>
+            <p>Plan your day. Get things done.</p>
+        </header>
+
+        <form id="taskForm">
+            <input type="text" id="taskInput"
+                   placeholder="What needs to be done?" required
+                   maxlength="150">
+            <button type="submit" class="add-btn">+ Add</button>
+        </form>
+
+        <div class="stats">
+            <div>
+                <h2 id="totalTasks">0</h2>
+                <p>Total Tasks</p>
+            </div>
+            <div>
+                <h2 id="completedTasks">0</h2>
+                <p>Completed</p>
+            </div>
+            <div>
+                <h2 id="pendingTasks">0</h2>
+                <p>Pending</p>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="pending">Pending</button>
+            <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <p id="emptyMessage">No tasks here. Add one to get started!</p>
+
+        <button id="clearCompleted" class="clear-btn">
+            Clear Completed Tasks
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
